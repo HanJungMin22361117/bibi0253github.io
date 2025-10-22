@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수록곡 - MONKEY HOTEL</title>
+  
+  <style>
+   
+    body {
+      margin: 0;
+      font-family: "Pretendard", 'AppleSDGothicNeoB00', sans-serif;
+      background: url('잔나비블러사진.png') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      position: relative;
+    }
+/* 네비게이션 바 */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #0b1b2b;
+      border-bottom: 1px solid gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+      height: 60px;
+      z-index: 10;
+      gap: 60px;
+
+    }
+
+    nav img {
+      position: absolute;
+      left: 40px;
+      height: 35px;
+      top: 50%; 
+      transform: translateY(-50%); 
+    }
+    nav ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    nav ul li a:hover {
+      color: gold;
+    }
+
+    /* --- 본문 (뮤직 플레이어용 2단 레이아웃) --- */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* --- 왼쪽: 장식용 플레이어 (기능 없음) --- */
+    .music-player {
+      flex: 1;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .main-album-art {
+      width: 100%;
+      border: 3px solid #b3a070; 
+      border-radius: 5px;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background-color: #555;
+      border-radius: 4px;
+      margin-top: 25px;
+      position: relative;
+    }
+    .progress {
+      width: 30%; 
+      height: 100%;
+      background-color: white;
+      border-radius: 4px;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 20px;
+      color: white; 
+    }
+    .control-btn {
+      font-size: 24px;
+    }
+    .control-btn.play-pause {
+      font-size: 36px;
+    }
+    .album-thumbnails {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 25px;
+    }
+    
+.album-thumbnails a {
+  width: 22%; 
+  display: block; 
+}
+
+
+.album-thumbnails img {
+  width: 100%; 
+  border-radius: 5px;
+  opacity: 0.7;
+  display: block; 
+  border: none;   
+  cursor: pointer;
+}
+    
+    .album-thumbnails img.active {
+      opacity: 1.0;
+    }
+
+    /* --- 오른쪽: 재생 목록 --- */
+    .playlist-container {
+      flex: 1;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+
+    /* 👈 [수정] 잔나비 로고 스타일 */
+    .jannabi-logo-text {
+      width: 230px;
+      margin-bottom: 20px;
+    }
+
+    /* 재생 목록 박스 */
+    .playlist-box {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.45);
+      border-radius: 20px;
+      padding: 30px; 
+      box-sizing: border-box;
+      backdrop-filter: blur(5px);
+    }
+
+    .song-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    
+    .song-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #444;
+      display: flex;
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+    .song-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .song-title {
+      font-size: 16px;
+      color: #eee;
+      margin-bottom: 15px; 
+    }
+
+    
+    .song-list audio {
+      width: 100%; 
+      height: 35px; 
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html"> 
+    <img src="잔나비 로고.png" alt="잔나비 로고">
+  </a>
+    <ul>
+      <li><a href="중간잔나비그룹소개2.html">그룹 소개</a></li>
+      <li><a href="중간잔나비최정훈.html">멤버 소개</a></li>
+      <li><a href="중간잔나비수록곡.html">수록곡</a></li>
+      <li><a href="중간잔나비공연일정.html">공연 일정</a></li>
+      <li><a href="중간잔나비굿즈.html">잔나비 굿즈</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    
+    <div class="music-player">
+      
+      <img src="잔나비2집.jpg" alt="Monkey Hotel 앨범 아트" class="main-album-art">
+
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+
+      <div class="controls">
+        <span class="control-btn">⏮</span>
+        <span class="control-btn play-pause">⏸</span>
+        <span class="control-btn">⏭</span>
+      </div>
+
+      <div class="album-thumbnails">
+  
+  <a href="중간잔나비수록곡.html">
+    <img src="잔나비1집.jpg" alt="Monkey Hotel 앨범" class="active">
+  </a>
+  
+  <a href="중간잔나비수록곡2.html">
+    <img src="잔나비2집.jpg" alt="전설 앨범">
+  </a>
+  
+  <a href="중간잔나비수록곡3.html">
+    <img src="잔나비3집.jpg" alt="환상의 나라 앨범">
+  </a>
+  
+  <a href="중간잔나비수록곡4.html">
+    <img src="잔나비4집.jpg" alt="Pony 앨범">
+  </a>
+  
+</div></div>
+
+    <div class="playlist-container">
+      
+      <img class="jannabi-logo-text" src="잔나비 로고2.png" alt="JANNABI Group Sound 로고">
+
+      <div class="playlist-box">
+        <ul class="song-list">
+          
+          <li>
+            <span class="song-title">주저하는 연인들을 위해</span>
+            <audio controls src="잔나비2주저.mp3"></audio>
+          </li>
+          
+          <li>
+            <span class="song-title">투게더!</span>
+            <audio controls src="잔나비2투게더.mp3"></audio>
+          </li>
+
+          <li>
+            <span class="song-title">꿈과 책과 힘과 벽</span>
+            <audio controls src="잔나비2꿈책.mp3"></audio>
+          </li>
+
+          <li>
+            <span class="song-title">나의 기쁨 나의 노래</span>
+            <audio controls src="잔나비2나의기쁨.mp3"></audio>
+          </li>
+
+          </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+  </body>
+</html>
