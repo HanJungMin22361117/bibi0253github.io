@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수록곡 - MONKEY HOTEL</title>
+  
+  <style>
+   
+    body {
+      margin: 0;
+      font-family: "Pretendard", 'AppleSDGothicNeoB00', sans-serif;
+      background: url('잔나비블러사진.png') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      position: relative;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #0b1b2b;
+      border-bottom: 1px solid gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+      height: 60px;
+      z-index: 10;
+      gap: 60px;
+
+    }
+    
+    nav img {
+      position: absolute;
+      left: 40px;
+      height: 35px;
+      top: 50%; 
+      transform: translateY(-50%); 
+    }
+    nav ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    nav ul li a:hover {
+      color: gold;
+    }
+
+    .schedule-container {
+      max-width: 1200px;
+      margin: 120px auto 60px; 
+      
+      
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 40px; 
+    }
+
+    .concert-item {
+      display: flex; 
+      align-items: center;
+      gap: 20px; 
+      padding: 20px;
+      
+      
+      border: 2px solid transparent; 
+      border-radius: 15px;
+      transition: border-color 0.3s ease; 
+      text-decoration: none;
+      color: white;
+    }
+
+    
+    .concert-item:hover {
+      border-color: gold; 
+    }
+
+   
+    .concert-info {
+      flex: 1; 
+    }
+
+    .concert-info h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .concert-info p {
+      font-size: 14px;
+      color: #ccc;
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+
+    .concert-poster {
+      width: 150px; 
+      height: 200px; 
+      object-fit: cover; 
+      border-radius: 8px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 네비게이션 -->
+  <nav>
+   <a href="index.html"> 
+    <img src="잔나비 로고.png" alt="잔나비 로고">
+  </a>
+    <ul>
+      <li><a href="중간잔나비그룹소개2.html">그룹 소개</a></li>
+      <li><a href="중간잔나비최정훈.html">멤버 소개</a></li>
+      <li><a href="중간잔나비수록곡.html">수록곡</a></li>
+      <li><a href="중간잔나비공연일정.html">공연 일정</a></li>
+      <li><a href="중간잔나비굿즈.html">잔나비 굿즈</a></li>
+    </ul>
+  </nav>
+
+  <!-- 공연 일정 그리드 -->
+  <div class="schedule-container">
+
+    <!-- 공연 1 -->
+    <a href="#" class="concert-item">
+      <div class="concert-info">
+        <h2>2025 Color in Music Festival - 인천</h2>
+        <p>장소 : 파라다이스시티</p>
+        <p>기간 : 2025.11.01 ~ 2025.11.02</p>
+      </div>
+        
+      <img src="4-1공연일정.jpg" alt="Color in Music Festival 포스터" class="concert-poster">
+    </a>
+
+    <!-- 공연 2 -->
+    <a href="#" class="concert-item">
+      <div class="concert-info">
+        <h2>2025 Asia Top Artist Festival</h2>
+        <p>장소 : 난지 한강공원</p>
+        <p>기간 : 2025.09.27 ~ 2025.09.28</p>
+      </div>
+
+      <img src="4-2공연일정.jpg" alt="Asia Top Artist Festival 포스터" class="concert-poster">
+    </a>
+
+    <!-- 공연 3 -->
+    <a href="#" class="concert-item">
+      <div class="concert-info">
+        <h2>2025 우리 모모콘</h2>
+        <p>장소 : 난지 한강공원 젊음의 광장</p>
+        <p>기간 : 2025.09.20 ~ 2025.09.21</p>
+      </div>
+      
+      <img src="4-3공연일정.jpg" alt="우리 모모콘 포스터" class="concert-poster">
+    </a>
+
+    <!-- 공연 4 -->
+    <a href="#" class="concert-item">
+      <div class="concert-info">
+        <h2>그룹사운드 잔나비 앵콜 콘서트</h2>
+        <p>장소 : KSPO DOME</p>
+        <p>기간 : 2025.08.02 ~ 2025.08.03</p>
+      </div>
+      
+      <img src="4-4공연일정.jpg" alt="잔나비 앵콜 콘서트 포스터" class="concert-poster">
+    </a>
+
+  </div>
+  
+</body>
+</html>
+

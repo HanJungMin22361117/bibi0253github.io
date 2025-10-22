@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그룹 소개 JANNABI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Pretendard", sans-serif;
+      background-color: #0b1b2b;
+      color: white;
+    }
+
+
+ /* 전체 배경 설정 */
+    body {
+      margin: 0;
+      font-family: "Pretendard", sans-serif;
+      background: url('잔나비블러사진.png') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+/* 네비게이션 바 */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #0b1b2b;
+      border-bottom: 1px solid gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+      height: 60px;
+      z-index: 10;
+      gap: 60px;
+
+    }
+
+
+    nav img {
+      position: absolute;
+      left: 40px;
+      height: 35px;
+      top: 50%;
+      transform: translateY(-50%); 
+    }
+
+    nav ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+        font-size: 14px;
+        font-family: 'AppleSDGothicNeoB00', sans-serif; 
+      transition: color 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: gold;
+    }
+
+    /* 본문 */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 60px;
+      max-width: 1100px;
+      margin: 140px auto 60px;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+    }
+
+    .content img {
+      width: 450px;
+      border-radius: 10px;
+    }
+
+    .text {
+      flex: 1;
+      text-align: left;
+    }
+
+    .text h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .text p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    .jannabi-logo {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 네비게이션 -->
+  <nav>
+    <a href="index.html"> 
+    <img src="잔나비 로고.png" alt="잔나비 로고">
+  </a>
+    <ul>
+      <li><a href="중간잔나비그룹소개2.html">그룹 소개</a></li>
+      <li><a href="중간잔나비최정훈.html">멤버 소개</a></li>
+      <li><a href="중간잔나비수록곡.html">수록곡</a></li>
+      <li><a href="중간잔나비공연일정.html">공연 일정</a></li>
+      <li><a href="중간잔나비굿즈.html">잔나비 굿즈</a></li>
+    </ul>
+  </nav>
+
+  <!-- 그룹 소개 섹션 -->
+  <div class="content">
+    <img src="잔나비그룹사진.png" alt="잔나비 그룹 사진" style="width: 600px;">
+
+    <div class="text">
+      <img src="잔나비 로고2.png" style="width: 210px; margin-left: 100px;">
+      <h2>“안녕하세요. 저희는 그룹사운드 잔나비입니다.”</h2>
+      <p>
+        대한민국의 록 밴드 1992년생 잔나비띠 최정훈(보컬)과 김도형(기타)로 구성된 2인조 밴드
+        멤버 모두가 원숭이 띠이기 때문에 지어진 이름이다.<br><br>
+          
+        맴버들 모두 60년대의 사이먼 앤 가펑클, 비틀즈, 70년대의 퀸
+        ,산울림, 일렉트릭 라이트 오케스트라, 90년대의 오아시스,
+        블러등 시대별로 다양한 아티스트들의 음악에서 큰 영향을 받았다.
+        따뜻하고도 향수를 자극하는 그들의 음악은 한국 인디 록씬을 대표하며,  
+        많은 청춘들에게 공감과 위로를 선사하고 있습니다.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

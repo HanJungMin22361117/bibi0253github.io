@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>굿즈 - 잔나비</title>
+  
+  <style>
+   
+    body {
+      margin: 0;
+      font-family: "Pretendard", 'AppleSDGothicNeoB00', sans-serif;
+      background: url('잔나비블러사진.png') no-repeat center center/cover;
+      
+      color: #333; 
+      position: relative;
+    }
+
+   /* 네비게이션 바 */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #0b1b2b;
+      border-bottom: 1px solid gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+      height: 60px;
+      z-index: 10;
+      gap: 60px;
+    }
+    nav img {
+      position: absolute;
+      left: 40px;
+      height: 35px;
+      top: 50%; 
+      transform: translateY(-50%);
+    }
+    nav ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    nav ul li a:hover {
+      color: gold;
+    }
+
+    /* - 본문 (굿즈 그리드 레이아웃) - */
+    .goods-grid {
+      max-width: 1200px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+      
+      /* 그리드 레이아웃으로 4열 배치 */
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+      gap: 30px; 
+    }
+
+    /* --- 개별 굿즈 아이템 (이미지 전용) --- */
+    .goods-item {
+      /* 호버 효과를 위한 설정 */
+      border: 3px solid transparent;
+      border-radius: 15px; 
+      transition: border-color 0.3s ease; 
+      
+      
+      text-decoration: none;
+      display: block; 
+      overflow: hidden; 
+    }
+
+    
+    .goods-item:hover {
+      border-color: gold;
+    }
+
+   /* 굿즈 이미지 */
+.goods-image {
+  width: 100%;
+  
+  aspect-ratio: 358.5 / 618.5; 
+  object-fit: cover; 
+  display: block;
+}
+    
+
+  </style>
+</head>
+<body>
+
+  <!-- 네비게이션 -->
+  <nav>
+    <a href="index.html"> 
+    <img src="잔나비 로고.png" alt="잔나비 로고">
+  </a>
+    <ul>
+      <li><a href="중간잔나비그룹소개2.html">그룹 소개</a></li>
+      <li><a href="중간잔나비최정훈.html">멤버 소개</a></li>
+      <li><a href="중간잔나비수록곡.html">수록곡</a></li>
+      <li><a href="중간잔나비공연일정.html">공연 일정</a></li>
+      <li><a href="중간잔나비굿즈.html">잔나비 굿즈</a></li>
+    </ul>
+  </nav>
+
+  <!-- 굿즈 그리드 -->
+  <div class="goods-grid">
+
+    <!-- 굿즈 1 -->
+    <a href="#" class="goods-item">
+      
+      <img src="굿즈1.png" alt="로고 뱃지" class="goods-image">
+    </a>
+
+    <!-- 굿즈 2 -->
+    <a href="#" class="goods-item">
+     
+      <img src="굿즈2.png" alt="앵콜 포스터" class="goods-image">
+    </a>
+
+    <!-- 굿즈 3 -->
+    <a href="#" class="goods-item">
+      
+      <img src="굿즈3.png" alt="콘서트 블루레이" class="goods-image">
+    </a>
+
+    <!-- 굿즈 4 -->
+    <a href="#" class="goods-item">
+      
+      <img src="굿즈4.png" alt="포스터 슬로건 세트" class="goods-image">
+    </a>
+    
+    <!-- 굿즈 5 -->
+    <a href="#" class="goods-item">
+      <img src="굿즈5.png" alt="반팔 티셔츠" class="goods-image">
+    </a>
+    
+    <!-- 굿즈 6 -->
+    <a href="#" class="goods-item">
+      <img src="굿즈6.png" alt="키링" class="goods-image">
+    </a>
+    
+    <!-- 굿즈 7 -->
+    <a href="#" class="goods-item">
+      <img src="굿즈7.png" alt="에코백" class="goods-image">
+    </a>
+    
+    <!-- 굿즈 8 -->
+    <a href="#" class="goods-item">
+      <img src="굿즈8.png" alt="폰케이스" class="goods-image">
+    </a>
+
+  </div>
+  
+</body>
+</html>
+
